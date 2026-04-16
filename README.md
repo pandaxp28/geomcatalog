@@ -92,10 +92,10 @@ GeomCatalog は、STEP、IGES、STL などの 3D CAD データを、サムネイ
 ## Screenshots / スクリーンショット
 
 Main View / メイン画面  
-![GeomCatalog Thumbnail Library](imgages/geomcatalog-thumbnail.png)
+![GeomCatalog Thumbnail Library](images/geomcatalog-thumbnail.png)
 
 Import Dialog / 取り込み画面  
-![GeomCatalog Import Dialog](imgages/import.png)
+![GeomCatalog Import Dialog](images/import.png)
 
 
 
