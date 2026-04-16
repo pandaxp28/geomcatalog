@@ -92,16 +92,12 @@ GeomCatalog は、STEP、IGES、STL などの 3D CAD データを、サムネイ
 ## Screenshots / スクリーンショット
 
 Main View / メイン画面  
-> Coming soon
+![GeomCatalog Thumbnail Library](imgages/geomcatalog-thumbnail.png)
 
 Import Dialog / 取り込み画面  
-> Coming soon
+![GeomCatalog Import Dialog](imgages/import.png)
 
-Thumbnail Library / サムネイル一覧  
-> Coming soon
 
-Metadata Panel / メタデータパネル  
-> Coming soon
 
 ---
 
