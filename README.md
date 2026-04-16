@@ -1,160 +1,210 @@
-# GeomCatalog
+# GeomCatalog - 3D Data Catalog and Thumbnail Browser for Windows
 
-3Dデータを、もっと見やすく、もっと探しやすく。
+Thumbnail-centered Windows catalog software for STEP, IGES, and STL files.  
+STEP・IGES・STL などの 3D データを、サムネイルで整理・検索できる Windows 向け 3D データ管理ツール。
 
-GeomCatalog は、STEP・IGES・STL などの 3D データをサムネイルで一覧表示し、名称やコメントとあわせて整理・検索できる Windows 向けの 3D データ管理ツールです。必要なモデルをすばやく見つけ、閲覧から詳細確認までスムーズにつなげます。 :contentReference[oaicite:0]{index=0}
+GeomCatalog is a Windows desktop tool focused on cataloging, browsing, and organizing 3D CAD files with a thumbnail-first workflow.  
+GeomCatalog は、3D CAD データをサムネイル中心で整理・検索・管理するための Windows デスクトップツールです。
 
----
-
-## GeomCatalog とは
-
-GeomCatalog は、3D設計データをサムネイル中心で管理するための Windows デスクトップアプリケーションです。  
-フォルダから CAD ファイルを取り込み、ローカルカタログを構築し、バックグラウンドでサムネイルを生成しながら、一覧・検索・整理を行えます。詳細確認が必要な場合は、連携ビューア **StepGeomChecker** で開くことができます。 :contentReference[oaicite:1]{index=1}
-
----
-
-## 主な特長
-
-- STEP / IGES / STL ファイルに対応
-- サムネイル中心の一覧表示
-- フォルダ単位での取り込み
-- ローカル SQLite ベースのカタログ管理
-- バックグラウンドでのサムネイル生成
-- 検索・絞り込み・整理に対応
-- StepGeomChecker との連携で詳細確認が可能 :contentReference[oaicite:2]{index=2}
+[![Download Releases](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](../../releases)
+[![Official Website](https://img.shields.io/badge/Official-Website-green?style=for-the-badge)](https://www.lwj.co.jp/)
+[![License](https://img.shields.io/badge/License-See%20Below-lightgrey?style=for-the-badge)](#license--ライセンス)
 
 ---
 
-## こんな用途に向いています
+## English
 
-- 受領した 3D データをまとめて整理したい
-- 過去モデルをサムネイル一覧から探したい
-- STEP や IGES ファイルを見比べながら確認したい
-- 3D データの管理と詳細確認を分けて運用したい
-- 詳細閲覧は StepGeomChecker、管理は GeomCatalog と役割分担したい
+GeomCatalog is a Windows desktop application for managing 3D design data such as STEP, IGES, and STL.
 
----
+If you are looking for a practical Windows tool for browsing large numbers of 3D files visually, organizing them in a local catalog, and opening selected files in StepGeomChecker for deeper inspection, GeomCatalog is designed for that workflow.
 
-## 対応フォーマット
+### Highlights
 
-現在の主な対応形式は以下です。
+- Import and organize STEP / IGES / STL files in a Windows GUI
+- Build a local SQLite-based catalog
+- Browse files in a thumbnail-centered library view
+- Use folder-based import workflows
+- Choose import modes:
+  - Reference
+  - Copy
+  - Move
+- Generate thumbnails in the background
+- Search and filter files by folder and metadata
+- Review item details in a side panel
+- Open selected items in StepGeomChecker for detailed viewing
+- Designed for responsive handling of larger CAD libraries
 
-- `.step`
-- `.stp`
-- `.iges`
-- `.igs`
-- `.stl` :contentReference[oaicite:3]{index=3}
+### Typical Use Cases
 
----
-
-## 基本的な使い方
-
-### 1. カタログを作成または開く
-ローカルのカタログデータベースを作成し、管理対象の情報を保存します。  
-カタログには、アイテム情報、フォルダ情報、タグ、サムネイル状態などが保持されます。 :contentReference[oaicite:4]{index=4}
-
-### 2. フォルダを取り込む
-取り込み元フォルダを選択し、次のいずれかの方法で登録します。
-
-- Reference
-- Copy
-- Move :contentReference[oaicite:5]{index=5}
-
-### 3. サムネイルで一覧表示
-取り込み後は、メイン画面のサムネイル一覧からファイルを視覚的に確認できます。  
-フォルダやメタデータによる絞り込みにも対応します。 :contentReference[oaicite:6]{index=6}
-
-### 4. 詳細確認
-選択したファイルは、必要に応じて StepGeomChecker で開いて詳細確認できます。 :contentReference[oaicite:7]{index=7}
+- Organizing large collections of received CAD files
+- Browsing old 3D models visually from thumbnails
+- Finding the right model quickly from a local library
+- Separating catalog management from detailed geometry inspection
+- Using GeomCatalog for discovery and StepGeomChecker for verification
 
 ---
 
-## UI コンセプト
+## 日本語
 
-GeomCatalog は、Lightroom のような視覚的ワークフローを意識して設計されています。
+GeomCatalog は、STEP、IGES、STL などの 3D CAD データを、サムネイル中心で整理・検索・管理するための Windows 向けデスクトップツールです。
 
-- 左側: フォルダツリー / フィルタ
-- 中央: 大きなサムネイル一覧
-- 右側: メタデータ / 操作パネル
-- 下部: フィルムストリップ / ステータス表示
+大量の 3D データを視覚的に探したい、ローカルカタログで整理したい、必要なときだけ StepGeomChecker で詳しく確認したい、という運用を想定して設計しています。
 
-大量の CAD データの中から、必要なモデルへ素早くたどり着くことを目的としています。 :contentReference[oaicite:8]{index=8}
+### 特長
 
----
+- STEP / IGES / STL を Windows GUI で取り込み・整理可能
+- ローカル SQLite ベースのカタログを構築
+- サムネイル中心の一覧表示に対応
+- フォルダ単位での取り込みに対応
+- 取り込みモードを選択可能
+  - Reference
+  - Copy
+  - Move
+- バックグラウンドでサムネイル生成
+- フォルダやメタデータによる検索・絞り込みに対応
+- 右側パネルで詳細情報を確認可能
+- 選択ファイルを StepGeomChecker で開いて詳細確認可能
+- 大量の CAD データを扱いやすい運用を重視
 
-## StepGeomChecker との連携
+### 主な用途
 
-GeomCatalog は、3D データの「探す・整理する」を担い、  
-StepGeomChecker は、3D データの「詳しく見る・確認する」を担います。
-
-この連携により、一覧管理と詳細確認を分けて効率よく運用できます。 :contentReference[oaicite:9]{index=9}
-
----
-
-## 製品の位置づけ
-
-GeomCatalog は、次のような製品ではありません。
-
-- フル機能の PDM / PLM
-- クラウド前提の SaaS
-- 3D モデリングソフト
-- StepGeomChecker の代替
-
-GeomCatalog は、あくまで **3D データのカタログ化・閲覧・整理・検索** に特化した製品です。 :contentReference[oaicite:10]{index=10}
+- 受領した 3D データをまとめて整理したいとき
+- 過去モデルをサムネイル一覧から探したいとき
+- ローカルライブラリから必要なモデルをすばやく見つけたいとき
+- 管理作業と詳細確認作業を分けて運用したいとき
+- GeomCatalog で探して StepGeomChecker で詳しく確認したいとき
 
 ---
 
-## エディションについて
+## Quick Links / クイックリンク
 
-現在の基本方針では、無料版の基準は次のとおりです。
+- Download / ダウンロード  
+  [Go to Releases](../../releases)
 
-- 1カタログ
+- Official Website / 公式ページ  
+  [LWJ Official Website](https://www.lwj.co.jp/)
+
+- Companion Viewer / 連携ビューア  
+  [StepGeomChecker](https://github.com/pandaxp28/StepGeomChecker)
+
+---
+
+## Screenshots / スクリーンショット
+
+Main View / メイン画面  
+> Coming soon
+
+Import Dialog / 取り込み画面  
+> Coming soon
+
+Thumbnail Library / サムネイル一覧  
+> Coming soon
+
+Metadata Panel / メタデータパネル  
+> Coming soon
+
+---
+
+## Features / 機能一覧
+
+| Feature | English | 日本語 |
+|---|---|---|
+| 3D file catalog | Build and manage a local catalog for CAD files | CAD ファイル用のローカルカタログを作成・管理 |
+| Supported formats | Import and organize STEP / IGES / STL files | STEP / IGES / STL を取り込み・整理 |
+| Thumbnail library | Browse files visually with thumbnails | サムネイルで視覚的に一覧表示 |
+| Import workflow | Import folders with Reference / Copy / Move | Reference / Copy / Move でフォルダ取り込み |
+| Local storage | Store catalog data locally with SQLite | SQLite によるローカル保存 |
+| Background jobs | Generate thumbnails in the background | バックグラウンドでサムネイル生成 |
+| Search and filter | Narrow files by folders and metadata | フォルダやメタデータで絞り込み |
+| Detail panel | Review item details and actions in the side panel | 右側パネルで詳細情報と操作を表示 |
+| StepGeomChecker handoff | Open selected files for detailed inspection | 選択ファイルを StepGeomChecker で詳細確認 |
+| Large library workflow | Designed for efficient handling of many CAD files | 大量の CAD データを扱いやすい運用に対応 |
+
+---
+
+## Supported Formats / 対応形式
+
+### Input / 入力
+
+- STEP (.step / .stp)
+- IGES (.igs / .iges)
+- STL (.stl)
+
+### Output / 出力
+
+- Managed local catalog records
+- Thumbnail cache
+- Metadata updates
+- StepGeomChecker handoff for selected files
+
+---
+
+## Download / ダウンロード
+
+Please download the latest version from the Releases page.  
+最新版は Releases ページからダウンロードしてください。
+
+[Download from Releases / Releases からダウンロード](../../releases)
+
+---
+
+## Website / 公式ページ
+
+The product page is also available on the company website.  
+製品ページは当社ウェブサイトにも掲載予定です。
+
+[LWJ Official Website](https://www.lwj.co.jp/)
+
+---
+
+## Notes / 注意事項
+
+- Supported environment is Windows desktop.
+  対応環境は Windows デスクトップです。
+
+- Initial catalog creation or large imports may take time depending on file count and model complexity.
+  初回カタログ作成や大量取り込みでは、件数やモデルの複雑さにより時間がかかる場合があります。
+
+- Background job failures should be handled as job states rather than blocking normal workflow.
+  バックグラウンド処理の失敗は、通常操作全体を止めるのではなく、ジョブ状態として扱う想定です。
+
+- Detailed viewing and inspection are intended to be handled in StepGeomChecker.
+  詳細表示や詳細確認は StepGeomChecker 側で行う想定です。
+
+---
+
+## Environment / 対応環境
+
+- Windows
+- .NET 8 based WinForms application
+
+---
+
+## License / ライセンス
+
+GeomCatalog is provided with a free edition baseline, and some features may be gated for paid editions.  
+GeomCatalog は無料版を基本とし、一部機能は有料版向けに制限される場合があります。
+
+Current public baseline includes:
+- one catalog
+- up to 200 registered items
+- Reference import allowed
+- Copy / Move gated
+- advanced sync features gated
+
+現在の基本方針:
+- 1 カタログ
 - 最大 200 アイテム
 - Reference 取り込み対応
 - Copy / Move は制限対象
-- 高度な同期機能は制限対象 :contentReference[oaicite:11]{index=11}
+- 高度な同期機能は制限対象
 
-※ 実際の仕様は今後変更される場合があります。
-
----
-
-## 動作環境
-
-- Windows 対応
-- .NET 8 ベースの WinForms アプリケーション :contentReference[oaicite:12]{index=12}
+If you include a separate license or terms file in this repository later, please refer to that file for detailed conditions.  
+今後このリポジトリに利用条件やライセンスファイルを追加する場合は、詳細条件はそちらを参照してください。
 
 ---
 
-## ダウンロード
+## Feedback / フィードバック
 
-最新版のダウンロードは、GitHub Releases または配布ページをご利用ください。
-
-> 準備中
-
----
-
-## スクリーンショット
-
-> 準備中
-
-- メイン画面
-- 取り込み画面
-- サムネイル一覧
-- 詳細パネル
-
----
-
-## 今後の展開
-
-GeomCatalog は、3D データ管理をより使いやすくするため、今後も改善を進めていきます。
-
-- サムネイル表示の強化
-- 検索・絞り込み機能の改善
-- 運用しやすい取り込みフローの最適化
-- StepGeomChecker との連携強化
-
----
-
-## お問い合わせ
-
-> www.lwj.co.jp
+Bug reports, feedback, and suggestions are welcome.  
+不具合報告、ご意見、ご要望を歓迎します。
