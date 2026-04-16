@@ -82,7 +82,7 @@ GeomCatalog は、STEP、IGES、STL などの 3D CAD データを、サムネイ
   [Go to Releases](../../releases)
 
 - Official Website / 公式ページ  
-  [LWJ Official Website](https://www.lwj.co.jp/)
+  [LWJ Official Website](http://www.lwj.co.jp/)
 
 - Companion Viewer / 連携ビューア  
   [StepGeomChecker](https://github.com/pandaxp28/StepGeomChecker)
@@ -153,7 +153,7 @@ Please download the latest version from the Releases page.
 The product page is also available on the company website.  
 製品ページは当社ウェブサイトにも掲載予定です。
 
-[LWJ Official Website](https://www.lwj.co.jp/)
+[LWJ Official Website](http://www.lwj.co.jp/)
 
 ---
 
